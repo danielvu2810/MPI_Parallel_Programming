@@ -1,5 +1,4 @@
-//#include "mpi.h"
-//#include <omp.h>
+#include "mpi.h"
 #include <cstdlib>
 #include <cctype>
 #include <cmath>
