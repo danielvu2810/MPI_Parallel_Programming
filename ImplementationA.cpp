@@ -10,9 +10,9 @@
 using namespace std;
 
 /*
- /usr/local/opt/llvm/bin/clang++ -fopenmp -L/usr/local/opt/llvm/lib ImplementationA.cpp -o PartA
+mpic++ -std=c++11 ImplementationA.cpp -o PartA
  
- ./PartA tc1.pbm tc1_test_a2_25.pbm 14 a2
+ mpirun -np 4 ./PartA tc1.pbm DS_matrix.txt output.txt
  */
 
 /* Global variables, Look at their usage in main() */
@@ -40,7 +40,6 @@ int main(int argc, char* argv[])
             std::cout << "ERROR: Incorrect number of arguments. Format is: <Input image filename> <Path To text file> <Output File Name>" << std::endl;
         }
         MPI_Finalize();
-
         return 0;
     }
  
@@ -129,5 +128,6 @@ int main(int argc, char* argv[])
     }
     
     
+    MPI_Finalize();
     return 0;
 }
