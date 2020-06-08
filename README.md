@@ -2,9 +2,9 @@
 
 *Using MPI to solve Parallel processing for image*
 
-##PART A:
+## PART A:
 An image histogram using Tarry’s algorithm
 
-##PART B:
+## PART B:
 Using different methods: MPI_Reduce and Righ Topology to count the word frequency
 
